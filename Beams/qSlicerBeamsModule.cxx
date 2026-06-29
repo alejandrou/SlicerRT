@@ -82,7 +82,7 @@ QStringList qSlicerBeamsModule::dependencies()const
 //-----------------------------------------------------------------------------
 QString qSlicerBeamsModule::helpText()const
 {
-  return QString("This module displays and handles beam geometry models created from the loaded isocenter and source fiducials. "
+  return tr("This module displays and handles beam geometry models created from the loaded isocenter and source fiducials. "
     "For more information see <a href=\"%1/Documentation/%2.%3/Modules/Beams\">%1/Documentation/%2.%3/Modules/Beams</a><br>").arg(
     this->slicerWikiUrl()).arg(qSlicerCoreApplication::application()->majorVersion()).arg(qSlicerCoreApplication::application()->minorVersion());
 }
@@ -90,7 +90,7 @@ QString qSlicerBeamsModule::helpText()const
 //-----------------------------------------------------------------------------
 QString qSlicerBeamsModule::acknowledgementText()const
 {
-  return "This work is part of SparKit project, funded by Cancer Care Ontario (CCO)'s ACRU program and Ontario Consortium for Adaptive Interventions in Radiation Oncology (OCAIRO).";
+  return tr("This work is part of SparKit project, funded by Cancer Care Ontario (CCO)'s ACRU program and Ontario Consortium for Adaptive Interventions in Radiation Oncology (OCAIRO).");
 }
 
 //-----------------------------------------------------------------------------

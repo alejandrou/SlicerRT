@@ -69,7 +69,7 @@ qSlicerDoseVolumeHistogramModule::~qSlicerDoseVolumeHistogramModule() = default;
 //-----------------------------------------------------------------------------
 QString qSlicerDoseVolumeHistogramModule::helpText()const
 {
-  return QString("This module computes dose volume histogram (DVH) and metrics from a dose map and segmentation. "
+  return tr("This module computes dose volume histogram (DVH) and metrics from a dose map and segmentation. "
     "For more information see <a href=\"%1/Documentation/%2.%3/Modules/DoseVolumeHistogram\">%1/Documentation/%2.%3/Modules/DoseVolumeHistogram</a><br>").arg(
     this->slicerWikiUrl()).arg(qSlicerCoreApplication::application()->majorVersion()).arg(qSlicerCoreApplication::application()->minorVersion());
 }
@@ -77,7 +77,7 @@ QString qSlicerDoseVolumeHistogramModule::helpText()const
 //-----------------------------------------------------------------------------
 QString qSlicerDoseVolumeHistogramModule::acknowledgementText()const
 {
-  return "This work was funded by Cancer Care Ontario (CCO)'s ACRU program and Ontario Consortium for Adaptive Interventions in Radiation Oncology (OCAIRO), and CANARIE.";
+  return tr("This work was funded by Cancer Care Ontario (CCO)'s ACRU program and Ontario Consortium for Adaptive Interventions in Radiation Oncology (OCAIRO), and CANARIE.");
 }
 
 //-----------------------------------------------------------------------------

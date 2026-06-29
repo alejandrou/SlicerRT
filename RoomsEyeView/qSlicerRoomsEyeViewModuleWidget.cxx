@@ -402,9 +402,9 @@ void qSlicerRoomsEyeViewModuleWidget::setup()
   ioManager->registerDialog(new qSlicerSaveDataDialog(this));
 
   // Add treatment machine options
-  d->TreatmentMachineComboBox->addItem("Varian TrueBeam STx", "VarianTrueBeamSTx");
-  d->TreatmentMachineComboBox->addItem("Siemens Artiste", "SiemensArtiste");
-  d->TreatmentMachineComboBox->addItem("From file...", "FromFile");
+  d->TreatmentMachineComboBox->addItem(tr("Varian TrueBeam STx"), "VarianTrueBeamSTx");
+  d->TreatmentMachineComboBox->addItem(tr("Siemens Artiste"), "SiemensArtiste");
+  d->TreatmentMachineComboBox->addItem(tr("From file..."), "FromFile");
 
   //
   // Make connections
@@ -1246,7 +1246,7 @@ void qSlicerRoomsEyeViewModuleWidget::checkForCollisions()
     return;
   }
 
-  d->CollisionDetectionStatusLabel->setText(QString::fromStdString("Calculating collisions..."));
+  d->CollisionDetectionStatusLabel->setText(tr("Calculating collisions..."));
   d->CollisionDetectionStatusLabel->setStyleSheet("color: black");
   QApplication::processEvents();
 

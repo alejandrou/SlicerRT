@@ -56,6 +56,7 @@ inline QDebug operator<<(QDebug debug, const std::string& str)
 class qMRMLObjectivesTableWidgetPrivate: public Ui_qMRMLObjectivesTableWidget
 {
   Q_DECLARE_PUBLIC(qMRMLObjectivesTableWidget);
+  Q_DECLARE_TR_FUNCTIONS(qMRMLObjectivesTableWidget);
 
 protected:
   qMRMLObjectivesTableWidget* const q_ptr;
@@ -99,7 +100,7 @@ void qMRMLObjectivesTableWidgetPrivate::init()
   // Set table header properties
   this->ColumnLabels << "Number" << "ObjectiveName" << "Segments" << "OverlapPriority" << "Penalty" << "Parameters";
   this->ObjectivesTable->setHorizontalHeaderLabels(
-    QStringList() << "#" << "Objective" << "Segments" << "OP" << "p" << "Parameters");
+    QStringList() << tr("#") << tr("Objective") << tr("Segments") << tr("OP") << tr("p") << tr("Parameters"));
   this->ObjectivesTable->setColumnCount(this->ColumnLabels.size());
 
 #if (QT_VERSION < QT_VERSION_CHECK(5, 0, 0))
@@ -236,7 +237,7 @@ void qMRMLObjectivesTableWidget::updateObjectivesTable()
   // Check selection validity
   if (!d->PlanNode)
   {
-    d->setMessage("No plan node selected.");
+    d->setMessage(tr("No plan node selected."));
     d->ObjectivesTable->setRowCount(0);
     d->ObjectivesTable->blockSignals(false);
     return;
@@ -244,7 +245,7 @@ void qMRMLObjectivesTableWidget::updateObjectivesTable()
 
   if (!d->PlanNode->GetSegmentationNode())
   {
-    d->setMessage("No segmentation node selected in the plan node.");
+    d->setMessage(tr("No segmentation node selected in the plan node."));
     d->ObjectivesTable->blockSignals(false);
     return;
   }
@@ -252,7 +253,7 @@ void qMRMLObjectivesTableWidget::updateObjectivesTable()
   qSlicerAbstractPlanOptimizer* selectedEngine = qSlicerPlanOptimizerPluginHandler::instance()->PlanOptimizerByName(d->PlanNode->GetPlanOptimizerName());
   if (!selectedEngine)
   {
-    d->setMessage("No valid plan optimizer selected in the plan node.");
+    d->setMessage(tr("No valid plan optimizer selected in the plan node."));
     d->ObjectivesTable->setRowCount(0);
     d->ObjectivesTable->blockSignals(false);
     return;

@@ -7,6 +7,8 @@ from scipy.sparse import coo_matrix
 from DoseEngines import *
 from Python.PyRadPlanUtils import prepareCt, prepareCst, preparePln
 
+from slicer.i18n import tr as _
+
 class pyRadPlanEngine(AbstractScriptedDoseEngine):
   """ pyRadPlan dose engine for SlicerRT External Beam Planning Module.
   """
@@ -22,29 +24,29 @@ class pyRadPlanEngine(AbstractScriptedDoseEngine):
   #------------------------------------------------------------------------------
   def defineBeamParameters(self):
     self.scriptedEngine.addBeamParameterSpinBox(
-    "pyRadPlan parameters", "numOfFractions", "number of fractions",
-    "Range of noise added to the prescription dose (+- half of the percentage of the Rx dose)",
+    _("pyRadPlan parameters"), "numOfFractions", _("number of fractions"),
+    _("Range of noise added to the prescription dose (+- half of the percentage of the Rx dose)"),
     0.0, 99.99, 30.0, 1.0, 2 )
 
     self.scriptedEngine.addBeamParameterComboBox(
-    "pyRadPlan parameters", "radiationMode", "radiation mode", "comment",
-    ["photons", "protons", "carbons"], 0)
+    _("pyRadPlan parameters"), "radiationMode", _("radiation mode"), _("comment"),
+    [_("photons"), _("protons"), _("carbons")], 0)
 
     self.scriptedEngine.addBeamParameterComboBox(
-    "pyRadPlan parameters","machine","machine","comment",["generic"],0)      
+    _("pyRadPlan parameters"), "machine", _("machine"), _("comment"), [_("generic")], 0)
 
   #------------------------------------------------------------------------------
   def updateBeamParametersForIonPlan(self, isIonPlanActive):
     if isIonPlanActive:
-      availableRadiationModes = ["protons", "carbons"]
-      parameterLabel = "radiation mode (ion)"
+      availableRadiationModes = [_("protons"), _("carbons")]
+      parameterLabel = _("radiation mode (ion)")
     else:
-      availableRadiationModes = ["photons", "protons", "carbons"]
-      parameterLabel = "radiation mode"
+      availableRadiationModes = [_("photons"), _("protons"), _("carbons")]
+      parameterLabel = _("radiation mode")
     
     self.scriptedEngine.updateBeamParameterComboBox(
-    "pyRadPlan parameters", "radiationMode", parameterLabel,
-    "comment", availableRadiationModes, 0)
+    _("pyRadPlan parameters"), "radiationMode", parameterLabel,
+    _("comment"), availableRadiationModes, 0)
 
   #------------------------------------------------------------------------------
   def calculateDoseUsingEngine(self, beamNode, resultDoseVolumeNode):

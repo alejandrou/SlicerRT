@@ -61,7 +61,7 @@ void qSlicerMockDoseEngine::defineBeamParameters()
 {
   // Noise level parameter
   this->addBeamParameterSpinBox(
-    "Mock dose", "NoiseRange", "Noise range (% of Rx):", "Range of noise added to the prescription dose (+- half of the percentage of the Rx dose)",
+    tr("Mock dose"), "NoiseRange", tr("Noise range (% of Rx):"), tr("Range of noise added to the prescription dose (+- half of the percentage of the Rx dose)"),
     0.0, 99.99, 10.0, 1.0, 2 );
 }
 

@@ -64,7 +64,7 @@ qSlicerExternalBeamPlanningModule::~qSlicerExternalBeamPlanningModule() = defaul
 //-----------------------------------------------------------------------------
 QString qSlicerExternalBeamPlanningModule::helpText()const
 {
-  return QString("The External Beam Planning module facilitates basic EBRT planning. "
+  return tr("The External Beam Planning module facilitates basic EBRT planning. "
     "For more information see <a href=\"%1/Documentation/%2.%3/Modules/ExternalBeamPlanning\">%1/Documentation/%2.%3/Modules/ExternalBeamPlanning</a><br>").arg(
     this->slicerWikiUrl()).arg(qSlicerCoreApplication::application()->majorVersion()).arg(qSlicerCoreApplication::application()->minorVersion());
 }
@@ -72,7 +72,7 @@ QString qSlicerExternalBeamPlanningModule::helpText()const
 //-----------------------------------------------------------------------------
 QString qSlicerExternalBeamPlanningModule::acknowledgementText()const
 {
-  return "This work was funded by Cancer Care Ontario (CCO)'s ACRU program and Ontario Consortium for Adaptive Interventions in Radiation Oncology (OCAIRO), and CANARIE.";
+  return tr("This work was funded by Cancer Care Ontario (CCO)'s ACRU program and Ontario Consortium for Adaptive Interventions in Radiation Oncology (OCAIRO), and CANARIE.");
 }
 
 //-----------------------------------------------------------------------------

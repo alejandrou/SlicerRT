@@ -252,7 +252,7 @@ void qSlicerDoseVolumeHistogramModuleWidget::updateWidgetFromMRML()
   d->checkBox_DoseSurfaceHistogram->setChecked(paramNode->GetDoseSurfaceHistogram());
   d->pushButton_ShowHideLegend->setChecked(paramNode->GetChartNode()->GetLegendVisibility());
   d->pushButton_ShowHideLegend->setText(
-    paramNode->GetChartNode()->GetLegendVisibility() ? "Hide legend" : "Show legend" );
+    paramNode->GetChartNode()->GetLegendVisibility() ? tr("Hide legend") : tr("Show legend") );
 
   // Set metrics table to table view
   if (d->MRMLTableView->mrmlTableNode() != paramNode->GetMetricsTableNode())
@@ -478,7 +478,7 @@ void qSlicerDoseVolumeHistogramModuleWidget::computeDvhClicked()
   d->ConvertProgressDialog = new QProgressDialog(qSlicerApplication::application()->mainWindow());
   d->ConvertProgressDialog->setModal(true);
   d->ConvertProgressDialog->setMinimumDuration(150);
-  d->ConvertProgressDialog->setLabelText("Computing DVH for all selected segments...");
+  d->ConvertProgressDialog->setLabelText(tr("Computing DVH for all selected segments..."));
   d->ConvertProgressDialog->show();
   QApplication::processEvents();
 
