@@ -90,7 +90,7 @@ QString qSlicerRoomsEyeViewModule::helpText()const
 //-----------------------------------------------------------------------------
 QString qSlicerRoomsEyeViewModule::acknowledgementText()const
 {
-  return tr("This work is part of SparKit project, funded by Cancer Care Ontario (CCO)'s ACRU program and Ontario Consortium for Adaptive Interventions in Radiation Oncology (OCAIRO).\n\nThe collision detection module was partly supported by Conselleria de Educacion, Investigacion, Cultura y Deporte (Generalitat Valenciana), Spain under grant number CDEIGENT/2019/011.");
+  return tr("This work is part of SparKit project, funded by Cancer Care Ontario (CCO)'s ACRU program and Ontario Consortium for Adaptive Interventions in Radiation Oncology (OCAIRO).\n\nThe collision detection module was partly supported by Conselleria de Educación, Investigación, Cultura y Deporte (Generalitat Valenciana), Spain under grant number CDEIGENT/2019/011.");
 }
 
 //-----------------------------------------------------------------------------

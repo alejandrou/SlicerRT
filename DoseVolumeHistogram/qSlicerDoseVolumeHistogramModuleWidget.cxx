@@ -899,5 +899,5 @@ void qSlicerDoseVolumeHistogramModuleWidget::showHideLegendClicked(bool checked)
   }
 
   paramNode->GetChartNode()->SetLegendVisibility(checked);
-  d->pushButton_ShowHideLegend->setText(checked ? "Hide legend" : "Show legend");
+  d->pushButton_ShowHideLegend->setText(checked ? tr("Hide legend") : tr("Show legend"));
 }

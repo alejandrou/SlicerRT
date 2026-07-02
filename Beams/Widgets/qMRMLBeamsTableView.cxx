@@ -29,6 +29,7 @@
 #include <vtkWeakPointer.h>
 
 // Qt includes
+#include <QCoreApplication>
 #include <QDebug>
 #include <QKeyEvent>
 #include <QStringList>
@@ -54,6 +55,7 @@
 class qMRMLBeamsTableViewPrivate: public Ui_qMRMLBeamsTableView
 {
   Q_DECLARE_PUBLIC(qMRMLBeamsTableView);
+  Q_DECLARE_TR_FUNCTIONS(qMRMLBeamsTableViewPrivate);
 
 protected:
   qMRMLBeamsTableView* const q_ptr;
@@ -96,7 +98,7 @@ void qMRMLBeamsTableViewPrivate::init()
   // Set table header properties
   this->ColumnLabels << "Number" << "Name" << "Gantry" << "Weight" << "Edit" << "Clone" << "BEV";
   this->BeamsTable->setHorizontalHeaderLabels(
-    QStringList() << "#" << "Name" << "Gantry" << "Weight" << "" );
+    QStringList() << "#" << tr("Name") << tr("Gantry") << tr("Weight") << "" );
   this->BeamsTable->setColumnCount(this->ColumnLabels.size());
 
 #if (QT_VERSION < QT_VERSION_CHECK(5, 0, 0))

@@ -35,6 +35,7 @@
 #include <vtkWeakPointer.h>
 
 // Qt includes
+#include <QCoreApplication>
 #include <QDebug>
 #include <QKeyEvent>
 #include <QStringList>

@@ -67,7 +67,7 @@ qSlicerBeamsModule::qSlicerBeamsModule(QObject* _parent)
 //-----------------------------------------------------------------------------
 QStringList qSlicerBeamsModule::categories()const
 {
-  return QStringList() << "Radiotherapy";
+  return QStringList() << tr("Radiotherapy");
 }
 
 //-----------------------------------------------------------------------------
